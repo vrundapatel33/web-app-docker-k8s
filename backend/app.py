@@ -5,10 +5,10 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # Database connection details
-DB_NAME = "your_database_name"
-DB_USER = "your_database_user"
-DB_PASS = "your_database_password"
-DB_HOST = "your_instance_ip"  # or "your_instance_connection_name" if using Cloud SQL
+DB_NAME = "mydb"
+DB_USER = "vrunda"
+DB_PASS = "Server@123"
+DB_HOST = "34.121.195.226"  # or "your_instance_connection_name" if using Cloud SQL
 
 # Establish the database connection
 conn = psycopg2.connect(
