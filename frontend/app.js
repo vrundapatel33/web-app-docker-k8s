@@ -12,7 +12,7 @@ document.getElementById('dataForm').addEventListener('submit', function(e) {
 
     const data = { value1, value2 };
 
-    fetch('http://localhost:5000/api/data', {
+    fetch('http://localhost:5000/submit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
