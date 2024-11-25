@@ -12,7 +12,7 @@ document.getElementById('dataForm').addEventListener('submit', function(e) {
 
     const data = { value1, value2 };
 
-    fetch('http://34.31.239.175:5000/submit', {
+    fetch('http://localhost:5000/submit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
