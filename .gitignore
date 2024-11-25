@@ -2,4 +2,4 @@ __pycache__/
 *.pyc
 .env
 node_modules/
-key.json
+backend/key.json
