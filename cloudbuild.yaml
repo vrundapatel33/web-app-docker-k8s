@@ -1,0 +1,11 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '-t', 'gcr.io/vp33-400500/frontend-app:$SHORT_SHA', '.' ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/vp33-400500/frontend-app:$SHORT_SHA']
+  - name: 'gcr.io/cloud-builders/kubectl'
+    args: ['set', 'image', 'deployment/frontend-deployment', 'frontend=gcr.io/vp33-400500/frontend-app:$SHORT_SHA', '--namespace=frontend']
+    env:
+      - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=gke-cluster'
+logsBucket: 'gs://lambton-assignment-2-vrunda'
